@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+}
+
+/* Navbar */
+
+.navbar {
+    height: 75px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 23, 42, 0.95);
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.brand span {
+    margin-left: 5px;
+}
+
+.brand small {
+    font-size: 11px;
+    background: #2563eb;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+
+.admin-info {
+    font-size: 15px;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+
+/* Welcome */
+
+.welcome {
+    color: white;
+    margin-bottom: 35px;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #dbeafe;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: rgba(255,255,255,0.96);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h2 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.dashboard-card a:hover {
+    color: #1d4ed8;
+}
+
+
+/* Logout */
+
+.logout-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logout {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #dc2626;
+    transform: translateY(-3px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+    .dashboard {
+        width: 92%;
+    }
+}

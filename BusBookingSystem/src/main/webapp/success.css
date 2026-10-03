@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+}
+
+/* Main Container */
+
+.success-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Success Card */
+
+.success-card {
+    width: 480px;
+    padding: 45px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    animation: cardEntry 0.8s ease forwards;
+    position: relative;
+    z-index: 10;
+}
+
+/* Card Animation */
+
+@keyframes cardEntry {
+
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Check Circle */
+
+.check-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #22c55e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    animation: successPulse 1.5s infinite;
+}
+
+.check-circle span {
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    animation: checkPop 0.7s ease;
+}
+
+@keyframes successPulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 25px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+@keyframes checkPop {
+
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Heading */
+
+.success-card h1 {
+    color: #16a34a;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+/* Text */
+
+.main-text {
+    color: #334155;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.thank-text {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Moving Bus */
+
+.bus-animation {
+    font-size: 55px;
+    margin: 15px 0;
+    animation: busMove 2s ease-in-out infinite;
+}
+
+@keyframes busMove {
+
+    0% {
+        transform: translateX(-30px);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    display: block;
+    padding: 13px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+.secondary {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.secondary:hover {
+    background: #cbd5e1;
+    transform: translateY(-3px);
+}
+
+/* Confetti */
+
+.confetti-piece {
+    position: fixed;
+    top: -20px;
+    width: 9px;
+    height: 16px;
+    background: #facc15;
+    z-index: 5;
+    animation: confettiFall linear forwards;
+}
+
+.confetti-piece:nth-child(3n) {
+    background: #ef4444;
+}
+
+.confetti-piece:nth-child(3n+1) {
+    background: #22c55e;
+}
+
+.confetti-piece:nth-child(3n+2) {
+    background: #38bdf8;
+}
+
+@keyframes confettiFall {
+
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .success-card {
+        width: 95%;
+        padding: 35px 25px;
+    }
+
+    .success-card h1 {
+        font-size: 26px;
+    }
+
+}

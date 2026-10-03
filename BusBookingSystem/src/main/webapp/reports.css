@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Navbar */
+.navbar {
+    height: 70px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #93c5fd;
+}
+
+/* Main */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.title h1 {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.title p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Report Cards */
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.report-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+.report-card .icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.report-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+.report-card .number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.report-card p {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Revenue Card */
+.revenue {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+}
+
+.revenue h3,
+.revenue p {
+    color: white;
+}
+
+.revenue .number {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .revenue {
+        grid-column: span 1;
+    }
+
+    .title h1 {
+        font-size: 26px;
+    }
+}

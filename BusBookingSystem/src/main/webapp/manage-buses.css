@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+}
+
+/* Navbar */
+
+.navbar {
+    height: 75px;
+    padding: 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(15, 23, 42, 0.96);
+    color: white;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.brand span {
+    font-size: 11px;
+    background: #2563eb;
+    padding: 5px 9px;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* Container */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+
+/* Heading */
+
+.heading {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.heading h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.heading p {
+    color: #dbeafe;
+}
+
+
+/* Add Button */
+
+.bus-actions {
+    margin-bottom: 25px;
+}
+
+.add-btn {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: #22c55e;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+}
+
+
+/* Bus Card */
+.bus-card {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: cardEntry 0.7s ease;
+    overflow-x: auto;
+}
+
+@keyframes cardEntry {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bus List Heading */
+.bus-card h2 {
+    color: #1e293b;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 24px;
+}
+
+/* Bus Table */
+.bus-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+    text-align: center;
+}
+
+.bus-table th {
+    background: #1e3a8a;
+    color: white;
+    padding: 14px 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bus-table td {
+    padding: 13px 12px;
+    color: #334155;
+    font-size: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.bus-table tbody tr {
+    transition: 0.3s;
+}
+
+.bus-table tbody tr:hover {
+    background: #eff6ff;
+    transform: scale(1.01);
+}
+
+/* First Column - Bus ID */
+.bus-table td:first-child {
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Fare */
+.bus-table td:nth-child(7) {
+    font-weight: 600;
+    color: #16a34a;
+}
+
+/* Total Seats */
+.bus-table td:nth-child(8) {
+    font-weight: 600;
+}
+
+/* Mobile Table */
+@media (max-width: 700px) {
+
+    .bus-card {
+        padding: 20px;
+    }
+
+    .bus-card h2 {
+        font-size: 20px;
+    }
+
+    .bus-table {
+        min-width: 850px;
+    }
+}
+
+.empty-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.bus-card h2 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.bus-card p {
+    color: #64748b;
+    max-width: 500px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+}
+
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    padding: 7px 12px;
+    margin: 3px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
